@@ -137,11 +137,7 @@ class TestCLI(unittest.TestCase):
         with patch('docksec.cli.print'):
             with patch('os.environ'):
                 # This tests that the env var would be set
-                try:
-                    from docksec.cli import main
-                    # Would need full mocking to execute
-                except Exception:
-                    pass
+                pass
     
     @patch('sys.argv', ['docksec', 'Dockerfile', '-i', 'test:latest', '--model', 'claude-3-5-sonnet'])
     @patch('docksec.cli.DockerSecurityScanner', create=True)
@@ -154,10 +150,7 @@ class TestCLI(unittest.TestCase):
         with patch('docksec.cli.print'):
             with patch('os.environ'):
                 # This tests that the env var would be set
-                try:
-                    from docksec.cli import main
-                except Exception:
-                    pass
+                pass
 
 
 if __name__ == '__main__':
